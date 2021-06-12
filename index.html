@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>formulaire</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        * {
+            font-size: large;
+        }
+        
+        h1,
+        h2 {
+            font-size: 150%;
+        }
+        
+        form {
+            display: inline-block;
+            width: 50%;
+        }
+        
+        fieldset {
+            background-color: #eeeeee;
+            margin: 1.5%;
+        }
+        
+        legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+        }
+        
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Mon premier formulaire HTML5.
+    </h1>
+    <form action="insertion.php" method="POST">
+        <fieldset>
+            <legend>Informations personnelles</legend>
+            <label for="name">Tapez votre Nom:</label>
+            <input type="text" id="name" name="name" placeholder="saisir votre nom"><br><br>
+            <label for="email">Tapez votre E-mail:</label>
+            <input type="text" id="email" name="email" placeholder="saisir votre e-mail"><br><br>
+
+
+            <label>Que desirez-vous comme entree?</label><br>
+            <input type="radio" id="salade" name="platEntree" value="salade">
+            <label for="salade">Une salade</label><br>
+
+            <input type="radio" id="soupe" name="platEntree" value="soupe">
+            <label for="soupe">Une soupe </label><br>
+
+            <input type="radio" id="omlette" name="platEntree" value="omlette">
+            <label for="omlette">Une omlette </label><br>
+
+
+            <label>Que desirez-vous comme plat principal?</label><br>
+
+            <input type="radio" id="poulet" name="platPrincipal" value="poulet">
+            <label for="poulet">Du poulet </label><br>
+
+            <input type="radio" id="steak" name="platPrincipal" value="steak">
+            <label for="steak">Un steak  </label><br>
+
+            <input type="radio" id="rote" name="platPrincipal" value="rote">
+            <label for="rote">Une rote</label><br>
+
+            <label>Que desirez-vous comme dessert ?</label><br>
+
+            <input type="radio" id="fruit" name="dessert" value="fruit">
+            <label for="fruit">un fruit </label><br>
+
+            <input type="radio" id="flan" name="dessert" value="flan">
+            <label for="flan">Un flan  </label><br>
+
+            <input type="radio" id="gateau" name="dessert" value="gateau">
+            <label for="gateau">Une gateau</label><br>
+            <h2>&emsp;Bouton d'inscription:</h2>
+            &emsp;&emsp;<input type="submit" value="Valider votre commande">
+        </fieldset>
+
+
+    </form>
+    <form action="affichage.php" method="GET">
+        <h2>&emsp;Bouton d'affichage du contenu de la table clients :</h2>
+        &emsp;&emsp;<input type="submit" value="afficher la table">
+    </form>
+
+    <!-- Insertion du nouveau plat dans le  menu-->
+    <form action="insertMenu.php" method="POST">
+        <fieldset>
+            <legend>Enrichir le Menu </legend>
+            <label for="nameOfPlat">Tapez le Nom du plat: </label>
+            <input type="text" id="nameOfPlat" name="nameOfPlat" placeholder="saisir le nom ici "><br><br>
+            <label for="typeOfPlat">Choisissez le type du plat: </label>
+            <select name="typeOfPlat" id="typeOfPlat">
+                <option value="entree">plat d'entree</option>
+                <option value="principal">plat principal</option>
+                <option value="dessert">plat dessert</option>
+            </select>
+            <br>
+            <h2>&emsp;Bouton d'insertion du plat:</h2>
+            &emsp;&emsp;<input type="submit" value="Inserer le nouveau Plat">
+            <br><br>
+        </fieldset>
+    </form>
+
+    <!-- Insertion du menu Dynamique-->
+    <form action="displayMenu.php" method="GET">
+        <fieldset>
+            <legend>Afficher le Menu d'une facon dynamique </legend>
+            <h2>&emsp;Bouton d'affichage des plats de la table menu:</h2>
+            &emsp;&emsp;<input type="submit" value="afficher le nouveau Menu">
+            <br><br>
+        </fieldset>
+    </form>
+
+
+
+</body>
+
+</html>
